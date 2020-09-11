@@ -30,12 +30,12 @@
 	
   }
   function LED1_On(){
-  message = new Paho.MQTT.Message("abrir");
+    message = new Paho.MQTT.Message(document.getElementById("sensor").innerHTML=document.getElementById("lname").value);
     message.destinationName = "wlara123@outlook.es/repato";
     client.send(message);
   }
     function LED1_Off(){
-    message = new Paho.MQTT.Message("cerrar");
+      message = new Paho.MQTT.Message(document.getElementById("sensor").innerHTML=" ");
     message.destinationName = "wlara123@outlook.es/repato";
     client.send(message);
     }
